@@ -1,0 +1,3 @@
+# Project exclude paths
+/boot-provider/target/
+/target/

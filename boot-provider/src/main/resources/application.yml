@@ -1,0 +1,23 @@
+#dubbo:
+#  application:
+#    name: dubbo-provider
+#  registry:
+#    address: localhost:2181
+#    protocol: zookeeper
+#    check: false
+#  protocol:
+#    name: dubbo
+#    port: 20880
+#  monitor:
+#    protocol: register
+#  consumer:
+#    check: false
+#    timeout: 3000
+#  scan:
+#    base-packages: com.lsj.bootprovider.service
+#
+server:
+  port: 8061
+
+application:
+  name: dubbo-provider

@@ -1,0 +1,9 @@
+dubbo:
+  application:
+    name: dubbo-consumer
+  registry:
+    address: localhost:2181
+    protocol: zookeeper
+    check: false
+server:
+  port: 8062
