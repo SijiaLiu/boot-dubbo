@@ -36,7 +36,7 @@ public class DubboConfig {
     public ProtocolConfig protocolConfig() {
         ProtocolConfig protocolConfig = new ProtocolConfig();
         protocolConfig.setName("dubbo");
-        protocolConfig.setPort(20881);
+        protocolConfig.setPort(20882);
         return protocolConfig;
     }
 
@@ -63,6 +63,8 @@ public class DubboConfig {
         methodConfigs.add(methodConfig);
 
         serviceConfig.setMethods(methodConfigs);
+        // 集群容错模式
+        // serviceConfig.setCluster();
         return serviceConfig;
     }
 }
