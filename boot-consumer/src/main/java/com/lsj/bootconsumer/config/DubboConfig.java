@@ -44,6 +44,8 @@ public class DubboConfig {
     public DemoService demoService() {
         ReferenceConfig<DemoService> referenceConfig = new ReferenceConfig<>();
         referenceConfig.setInterface(DemoService.class);
+        // dubbo 直连
+        // referenceConfig.setUrl("");
         // 消费方接口级别的超时
         referenceConfig.setTimeout(300);
         referenceConfig.setRetries(3);
@@ -56,6 +58,9 @@ public class DubboConfig {
         methodConfigs.add(methodConfig);
 
         referenceConfig.setMethods(methodConfigs);
+
+        // 负载均衡策略 默认random, 轮询roundrobin, leastactive， consistenthash
+        referenceConfig.setLoadbalance("roundrobin");
         return referenceConfig.get();
     }
 }
